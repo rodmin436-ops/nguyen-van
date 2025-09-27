@@ -317,16 +317,14 @@ right: 6px;
 
 <h3><strong>Dịch vụ cung cấp:</strong></h3>
 <ul>
-<li><strong>Giao Dịch Trung Gian – Đổi Tiền<br>
+<li><strong>Giao Dịch Trung Gian<br>
 </strong></li>
 <li><strong><span data-sheets-root="1">Cung cấp tất cả các dịch vụ Roblox-liên Quân-Free Fire</span></strong></li>
+<li><strong>Cung cấp dịch cụ đổi thẻ - Đổi tiền <br>
 </ul>
-<h3 dir="auto"><strong>Chủ TK “Nguyễn Thanh Tùng</strong><strong>“</strong></h3>
+<h3 dir="auto"><strong>Chủ TK “Nguyễn Anh Khoa</strong><strong>“</strong></h3>
 <ul>
-<li><span data-sheets-root="1"><strong>Vcb:</strong> 1049936467<br>
-</span></li>
-<li><span data-sheets-root="1"><strong>Tsr:</strong> 0823218979</span></li>
-<li><span data-sheets-root="1"><strong>MBBank: </strong>69999912102007</span></li>
+<li><span data-sheets-root="1"><strong>MBBank: </strong>0325959317</span></li>
 </ul>
 </div>
 </div>
@@ -733,10 +731,9 @@ Checkscam sẽ giải quyết bảo hiểm khi bạn là người giao dịch tr
 }
 </script>
 
-<script>
+<<script>
 // TỰ ĐỘNG ÁP DỤNG KHI TRANG LOAD
 document.addEventListener('DOMContentLoaded', function() {
-    // Đảm bảo 2 khung luôn ngang nhau
     var b = document.querySelector('.b');
     if (b) {
         b.style.display = 'flex';
@@ -745,8 +742,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-</script>
 <style>
+/* Mặc định: hiển thị ngang (PC) */
+.b {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* canh giữa ngang */
+    align-items: center;     /* canh giữa dọc nếu đủ chiều cao */
+}
+
+/* Khi màn hình nhỏ hơn 768px (điện thoại, tablet nhỏ) thì chuyển sang dọc */
+@media (max-width: 768px) {
+    .b {
+        flex-direction: column; /* đổi từ ngang sang dọc */
+        align-items: center;    /* giữ khung ở giữa */
+    }
+}
+
+</style>
+
   
 </style>
 </html>
