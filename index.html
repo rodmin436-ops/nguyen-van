@@ -341,12 +341,12 @@ right: 6px;
 }}
               @media screen and (max-width:413px){#uyt .bb{padding: 10px;}}@media screen and (max-width:374px){#uyt .bb{font-size:12px;}}#uyt .b >.b2 a{background: none; z-index: 1;}.ovltbc2
 
-         @media screen and (max-width: 767px) 
+@media screen and (max-width: 767px) {
 
-                    #uyt .b > div.b1 
+                    #uyt .b > div.b1 {
                         padding-right: 110px !important;
-                    
-
+                    }
+}
 </style>
     <span class="gtt" data-ss="&lt;img src=&quot;https://admin.checkscam.vn/wp-content/themes/hungdevwp/a/i/lg3.svg&quot; alt=&quot;QUỸ BẢO HIỂM CHECKSCAM.VN&quot;&gt;"></span>
 
@@ -365,7 +365,7 @@ right: 6px;
                 </p><div style="display:block;margin: 0 auto;text-align:center;">
 
                     <a href="https://www.messenger.com/t/2109493296252508" class="bb" style="display:inline-block;" target="_blank">Check Messenger</a>
-					<div class="qh_new bb22" style="margin-left: 10px;"><a href="https://t.me/checkscam_vn" class="bb " style=";display:inline-block;margin: 0 !important"; target="_blank">Bot Check GDV</a></div>	
+					<div class="qh_new bb22" style="margin-left: 10px;"><a href="https://t.me/checkscam_vn" class="bb " style=";display:inline-block;margin: 0 !important;" target="_blank">Bot Check GDV</a></div>	
                     
 
                     
@@ -687,39 +687,42 @@ function fetch(){
 
 
 
-<script type="text/javascript">
+<script>
+    // Đảm bảo jQuery đã tải xong (mặc dù WordPress đã tải ở trên)
+    $(document).ready(function() {
+        
+        // Code để đóng thông báo (Được lấy từ index.html cũ)
+        $('.tbc2 .cls, .tbc2 .cls2').click(function(){
+            $('.tbc2').removeClass('tbc2c');
+            $('.ovltbc2').removeClass('tbc2c');
+            $('.qh_new').addClass('bb22');
+            $('.ovl_checkmes').addClass('ovl_checkmesc');
+        });
+        
+        // Code ẩn lớp phủ khi click vào icon
+        $('.qh_new p i').click(function(event){
+            event.preventDefault();
+            $('.qh_new').removeClass('bb22');
+            $('.ovl_checkmes').removeClass('ovl_checkmesc');
+        });
+        
+        // Code cài đặt Logo/Link (Được lấy từ index.html cũ)
+        var gtt = $('.gtt').data('ss');
+        var link = 'https://admin.checkscam.vn';
+        $('#mn .l').html(gtt);
+        $('#mn .l').parent().attr('href', link);
 
-    $('.ess').click(function(){
 
-        $(this).css('display','none');
-
-        $('.ifr').css('display','none');
-
+        // ********** CODE KÍCH HOẠT HIỂN THỊ THÔNG BÁO **********
+        // Đặt ở cuối để chạy sau khi tất cả code khác đã được thiết lập
+        $('.tbc2').addClass('tbc2c');
+        $('.ovltbc2').addClass('tbc2c');
     });
-    if($(window).width() < 768){
-        $('#s1 input.search-field').blur(function() {
-        $('#s1 input.search-field').css('border', '1px solid #ddd');
-      })
-      .focus(function() {
-        $(this).css("border", '1px solid blue')
-      });
-    }else{
-        $('#s1 input.search-field').blur(function() {
-        $('#s1 input.search-field').css('border', '1px solid #fff');
-      })
-      .focus(function() {
-        $(this).css("border", '1px solid blue')
-      });
-    }
-    
-      $('#mn input.search-field').blur(function() {
-        $('#mn input.search-field').css('border', '1px solid #f2f3f4');
-      })
-      .focus(function() {
-        $(this).css("border", '1px solid blue')
-      });
 
-</script>
+    </script>
+    
+    </body> 
+</html>
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;985b8aad0de9fdc3&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.9.1&quot;,&quot;token&quot;:&quot;2f5e5d18dc2447a3a737ee8b92d5cf1e&quot;}" crossorigin="anonymous"></script>
 
 
@@ -759,52 +762,53 @@ Checkscam sẽ giải quyết bảo hiểm khi bạn là người giao dịch tr
 
 <div class="ovltbc2"></div>
 <style>
-.tbc2 h2, .tbc2 h3{margin-bottom:15px;}.tbc2{position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);background:#fff;border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:10px;width:650px;max-width:98%;max-height:460px;padding:10px;z-index:100;display:none}.tbc2 .cls{position:absolute;width:30px;height:30px;display:inline-block;background:ur(https://admin.checkscam.vn/wp-content/themes/hungdevwp/a/i/clsa.png) no-repeat center center;top:10px;right:10px;cursor:pointer}.tbc2 .bb{;padding:15px; border-top: 1px solid #D7D8DC;border-bottom: 1px solid #D7D8DC; }.tbc2 p,.tbc2 li{text-align:justify;margin-bottom:7px}.tbc2 .bb > div{max-height:290px;overflow-y:auto;padding-right: 10px;}.tbc2 .a{display:block;text-transform:uppercase;color:#111;font-size:24px;padding-bottom:10px;border-bottom:1px solid #ddd;margin-bottom:10px}.tbc2 .cls2{width:90px;height:30px;display:flex;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;background:red;float:right;margin-top: 15px;font-size:15px;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;cursor:pointer}.tbc2 .bb > div::-webkit-scrollbar-thumb{background:#111;border-radius:10px;padding-left:10px;-moz-border-radius:10px;-webkit-border-radius:10px; margin-right:10px;}.tbc2 .bb > div::-webkit-scrollbar{width:5px; }.ovltbc2{position:fixed;top:0;left:0;right:0;bottom:0;background:#111;opacity:.7;z-index:99;display:none}.tbc2 li{padding-left:20px;position:relative}.tbc2 ul{padding-left:15px;}.tbc2 li:before{content:'';width:6px;height:6px;position:absolute;top:7px;left:0;background:#006B69;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;display:inline-block}}.tbc2 > .bb > div a{color:#006B69}.tbc2c{display:inline-block}.pucs{position:fixed;right:0;bottom:0;z-index:2}@media screen and (max-width:639px){.pucs{display:none;}}.tbc2 .aa{display:block;position:relative;padding-left:55px;margin-bottom:20px;width:400px;} .tbc2 .aa img{width:40px;height:40px;position:absolute;left:0;top:50%;transform:translateY(-50%);-moz-transform:translateY(-50%);-webkit-transform:translateY(-50%);border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;}.tbc2 .aa span{display:block;}.tbc2 .aa span:nth-child(2){text-transform:capitalize;font-weight:bold;color:#1C0822;}.tbc2 .aa span:nth-child(3){color:#505156;font-size:12px;}
+    .tbc2 h2, .tbc2 h3{margin-bottom:15px;}.tbc2{position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);background:#fff;border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:10px;width:650px;max-width:98%;max-height:460px;padding:10px;z-index:100;display:none}.tbc2 .cls{position:absolute;width:30px;height:30px;display:inline-block;background:url(https://admin.checkscam.vn/wp-content/themes/hungdevwp/a/i/clsa.png) no-repeat center center;top:10px;right:10px;cursor:pointer}.tbc2 .bb{;padding:15px; border-top: 1px solid #D7D8DC;border-bottom: 1px solid #D7D8DC; }.tbc2 p,.tbc2 li{text-align:justify;margin-bottom:7px}.tbc2 .bb > div{max-height:290px;overflow-y:auto;padding-right: 10px;}.tbc2 .a{display:block;text-transform:uppercase;color:#111;font-size:24px;padding-bottom:10px;border-bottom:1px solid #ddd;margin-bottom:10px}.tbc2 .cls2{width:90px;height:30px;display:flex;align-items:center;justify-content:center;color:#fff;text-transform:uppercase;background:red;float:right;margin-top: 15px;font-size:15px;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;cursor:pointer}.tbc2 .bb > div::-webkit-scrollbar-thumb{background:#111;border-radius:10px;padding-left:10px;-moz-border-radius:10px;-webkit-border-radius:10px; margin-right:10px;}.tbc2 .bb > div::-webkit-scrollbar{width:5px; }.ovltbc2{position:fixed;top:0;left:0;right:0;bottom:0;background:#111;opacity:.7;z-index:99;display:none}.tbc2 li{padding-left:20px;position:relative}.tbc2 ul{padding-left:15px;}.tbc2 li:before{content:'';width:6px;height:6px;position:absolute;top:7px;left:0;background:#006B69;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;display:inline-block}}.tbc2 > .bb > div a{color:#006B69}.tbc2c{display:inline-block}.pucs{position:fixed;right:0;bottom:0;z-index:2}@media screen and (max-width:639px){.pucs{display:none;}}.tbc2 .aa{display:block;position:relative;padding-left:55px;margin-bottom:20px;width:400px;} .tbc2 .aa img{width:40px;height:40px;position:absolute;left:0;top:50%;transform:translateY(-50%);-moz-transform:translateY(-50%);-webkit-transform:translateY(-50%);border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;}.tbc2 .aa span{display:block;}.tbc2 .aa span:nth-child(2){text-transform:capitalize;font-weight:bold;color:#1C0822;}.tbc2 .aa span:nth-child(3){color:#505156;font-size:12px;}
     .tbc2 > p{text-transform:uppercase;}@media screen and (max-width:650px){.tbc2{width:98%;}}
 </style>
-    <script type="text/javascript">
+   </style>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script src="script.js"></script> 
+    
+    <script>
+    $(document).ready(function() {
+        
+        // Code của bạn để đóng thông báo
         $('.tbc2 .cls, .tbc2 .cls2').click(function(){
             $('.tbc2').removeClass('tbc2c');
             $('.ovltbc2').removeClass('tbc2c');
             $('.qh_new').addClass('bb22');
             $('.ovl_checkmes').addClass('ovl_checkmesc');
         });
+        
+        // Code ẩn lớp phủ khi click vào icon
         $('.qh_new p i').click(function(event){
             event.preventDefault();
             $('.qh_new').removeClass('bb22');
             $('.ovl_checkmes').removeClass('ovl_checkmesc');
         });
+        
+        // Code cài đặt Logo/Link
+        var gtt = $('.gtt').data('ss');
+        var link = 'https://admin.checkscam.vn';
+        $('#mn .l').html(gtt);
+        $('#mn .l').parent().attr('href', link);
 
 
+        // ********** CODE KÍCH HOẠT HIỂN THỊ THÔNG BÁO KHI VÀO WEB **********
+        $('.tbc2').addClass('tbc2c');
+        $('.ovltbc2').addClass('tbc2c');
+    });
 
-
+    // ... (Các đoạn code JavaScript khác không dùng jQuery nằm ở đây) ...
     var gtt = jQuery('.gtt').data('ss');
-
     var link = 'https://admin.checkscam.vn';
-
     $('#mn .l').html(gtt);
-
     $('#mn .l').parent().attr('href', link);
- <style>
-/* FIX LAYOUT NGANG */
-.b {
-    display: flex !important;
-    gap: 20px !important;
-    margin: 20px 0 !important;
-}
-
-.b1, .b2 {
-    flex: 1 !important;
-    border: 1px solid #ddd !important;
-    padding: 15px !important;
-    border-radius: 8px !important;
-    background-color: #f9f9f9 !important;
-}
-
-
- 
-
-</script>
+    </script>
+    
+    </body> 
+</html>
 
 </body><chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar></html>
