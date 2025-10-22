@@ -58,13 +58,62 @@ function fetch() {
   });
 }
 
-// Close modal functionality
-$(".ess").click(function () {
-  $(this).css("display", "none");
-  $(".ifr").css("display", "none");
+/*
+  RESPONSIVE FIX (SỬA ỔN ĐỊNH)
+  - Không chạy liên tục (không dùng setInterval)
+  - Không xóa style inline của phần tử (không dùng removeAttr)
+  - Chỉ chạy khi load và khi resize
+*/
+function applyResponsiveFix() {
+  var $targetItems = $(".tt1 .table .btw .owl-item");
+  var $targetStage = $(".tt1 .table .btw .owl-stage");
+
+  // Nếu không tìm thấy các phần tử mục tiêu thì dừng (tránh lỗi)
+  if ($targetItems.length === 0 || $targetStage.length === 0) return;
+
+  var windowWidth = $(window).width();
+
+  if (windowWidth >= 768) {
+    // Desktop: 2 cột
+    $targetStage.css({
+      display: "flex",
+      "flex-wrap": "wrap",
+      width: "100%",
+      transform: "none",
+    });
+
+    $targetItems.each(function () {
+      // Ghi đè những thuộc tính cần thiết nhưng giữ nguyên các inline style khác
+      $(this).css({
+        width: "50%",
+        "max-width": "50%",
+        flex: "0 0 50%",
+        transform: "none",
+      });
+    });
+  } else {
+    // Mobile: 1 cột
+    $targetItems.each(function () {
+      $(this).css({
+        width: "100%",
+        "max-width": "100%",
+        flex: "0 0 100%",
+        transform: "none",
+      });
+    });
+    $targetStage.css("transform", "none");
+  }
+}
+
+// Chạy fix khi load và khi resize (không chạy liên tục bằng setInterval)
+$(document).ready(function () {
+  applyResponsiveFix();
+  $(window).on("resize", function () {
+    applyResponsiveFix();
+  });
 });
 
-// Redirect to HTTPS if on HTTP (Lưu ý: Dòng này có thể không cần thiết nếu server đã cấu hình sẵn)
-if (window.location.protocol == 'http:') { 
-  window.location.href =  window.location.href.replace( 'http:', 'https:'); 
-}
+// Run once after full window load to catch plugin init (safe, not continuous)
+$(window).on('load', function(){
+  setTimeout(function(){ applyResponsiveFix(); }, 600);
+});

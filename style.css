@@ -2398,3 +2398,21 @@ display: none;}
           background: url(a/i/sc.png) no-repeat center center;
           display: inline-block;
         }
+        #uyt .b {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#uyt .b > div {
+  flex: 0 0 48%; /* mỗi box chiếm 48% */
+  max-width: 48%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  #uyt .b > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
