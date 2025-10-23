@@ -20,34 +20,51 @@ img:is([sizes="auto"] i, [sizes^="auto"] i) {
 }
 </style>
 <style>
-/* contains a box */
-#opt sb {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: stretch !important;
-    gap: 10px !important;
-    flex-wrap: wrap !important;
+#uyt .b {
+    display: flex;
+    justify-content: center; /* Căn giữa cả hai khung */
+    align-items: stretch;
+    gap: 4%; /* Khoảng cách giữa hai khung */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Để hiển thị đẹp trên điện thoại */
 }
 
-/* box con */
-#opt sb > * {
-    flex: 1 1 auto !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    display: block !important;
+#uyt .b > div {
+    flex: 1 1 48%;
+    border: 1px solid #e3ec09;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 200px;
+    position: relative;
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-    #opt sb {
-        flex-wrap: wrap !important;
+#uyt .b > div:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    background: url(https://admin.checkscam.vn/wp-content/themes/hungdevwp/a/i/ut1.png) no-repeat center center;
+    transform: translateY(-50%);
+}
+
+/* Responsive - trên điện thoại sẽ tự xuống hàng */
+@media screen and (max-width: 767px) {
+    #uyt .b {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    #opt sb > * {
-        flex: 1 1 100% !important;
-        max-width: 100% !important;
+
+    #uyt .b > div {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
 }
+
 </style>
 
 
